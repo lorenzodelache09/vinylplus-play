@@ -29,7 +29,7 @@ Il reprend le langage visuel VinylPlus : palette violette, accents cyan, disque 
 - [Architecture](#architecture)
 - [Données et confidentialité](#données-et-confidentialité)
 - [Raccourcis clavier](#raccourcis-clavier)
-- [Limites et feuille de route](#limites-et-feuille-de-route)
+- [Feuille de route](#feuille-de-route)
 - [Licence](#licence)
 
 ---
