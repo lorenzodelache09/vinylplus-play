@@ -168,8 +168,6 @@ L'analyse récursive affiche la progression, le fichier courant et les erreurs �
 
 ## Fonctionnalités
 
-### Phase 1 — Fondations
-
 - Navigation complète : Accueil, Bibliothèque, Albums, Artistes, Morceaux, Playlists, Favoris, Historique, Statistiques et Paramètres.
 - Barre de lecture permanente : pochette, titre/artiste, précédent/play/suivant, progression interactive, lecture aléatoire, répétition (`off` / `all` / `one`), volume, mute réversible, file d'attente et égaliseur.
 - Moteur audio réel basé sur `HTMLAudioElement` et la Web Audio API : lecture/pause, file dynamique, historique, gestion d'erreurs, notifications Windows et raccourcis globaux.
@@ -178,7 +176,7 @@ L'analyse récursive affiche la progression, le fichier courant et les erreurs �
 - Édition des tags directement dans les fichiers audio, sans réencodage.
 - Assistant de premier lancement et persistance de tous les réglages.
 
-### Fonctionnalités avancées déjà opérationnelles
+### Fonctionnalités avancées
 
 - **Playlists complètes** : création, renommage, duplication, suppression, ajout multicritère, retrait, réorganisation et export M3U.
 - **Égaliseur 10 bandes** temps réel avec presets et configurations personnalisées sauvegardées.
@@ -200,8 +198,6 @@ Téléchargez l'un des exécutables publiés dans la section **Releases** GitHub
 | `VinylPlus-Play-0.1.0-x64-setup.exe` | Installateur NSIS assisté : dossier d'installation, raccourcis Bureau/menu Démarrage, licence MIT, écran de fin avec lancement immédiat. |
 
 Les exécutables sont **non signés**. Selon la configuration de Windows Defender SmartScreen, cliquez sur **Plus d'informations** puis **Exécuter quand même** lors du premier lancement.
-
-> L'installateur reprend la charte VinylPlus : en-tête et bannière VPP, lettrage issu de `assets/text.png`, page de licence sur fond blanc pour une lisibilité maximale.
 
 ### Depuis les sources
 
@@ -274,7 +270,7 @@ scripts/                Génération des assets d'installation
 
 ---
 
-## Limites et feuille de route
+## Feuille de route
 
 Non implémenté dans cette version :
 
@@ -286,20 +282,8 @@ Non implémenté dans cette version :
 - MusicBrainz, Vinyl Carousel, Listening Sessions, Album Journal, Smart Shuffle, Mood Playlists ;
 - plugins/API et intégration VinylPlus DJ.
 
-> La capture de VinylPlus DJ mentionnée dans le cahier des charges initial n'était pas présente dans le projet. La charte a donc été construite à partir de la palette hexadécimale fournie.
-
 ---
 
 ## Licence
 
 Distribué sous licence [MIT](LICENSE). Le même texte est intégré à la page de licence de l'installateur Windows.
-
----
-
-## Vérifications
-
-- Build de production : `tsc --noEmit` strict + Vite, sans erreur.
-- Test end-to-end via CDP sur l'exécutable compilé : lecture réelle en `media://` (réponse 206), seek, mute réversible, aléatoire sans répétition tant que la file n'est pas épuisée, purge d'un fichier manquant ayant de l'historique, écriture/lecture des tags et de la couverture, aucune exception renderer.
-- Rendu vérifié à 1480, 1200, 1000 et 800 px : pas de débordement de l'interface.
-- Installateur : installation et désinstallation silencieuses validées.
-- Captures de cette documentation générées depuis l'application réelle avec un profil utilisateur isolé.
